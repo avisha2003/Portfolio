@@ -1,0 +1,173 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 10%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 14%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 196 94% 48%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 10% 16%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 10% 18%;
+    --muted-foreground: 210 10% 70%;
+
+    --accent: 240 10% 20%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 10% 20%;
+    --input: 240 10% 20%;
+    --ring: 196 94% 48%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 240 10% 8%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 196 94% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 10% 14%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 10% 16%;
+    --sidebar-ring: 196 94% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animate-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animate-delay-500 {
+    animation-delay: 500ms;
+  }
+
+  .animate-fill-both {
+    animation-fill-mode: both;
+  }
+
+  .animate-once {
+    animation-iteration-count: 1;
+  }
+
+  .glow-text {
+    text-shadow: 0 0 10px rgba(14, 165, 233, 0.7);
+  }
+
+  .glow-border {
+    box-shadow: 0 0 15px rgba(14, 165, 233, 0.5);
+  }
+}
+
+@layer components {
+  .skill-bar {
+    @apply h-1 bg-muted rounded overflow-hidden;
+  }
+
+  .skill-bar-fill {
+    @apply h-full bg-wood transform-gpu origin-left;
+    animation: skill-fill 1s ease-out forwards;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-6 py-16 md:py-24 opacity-0;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-8 relative;
+  }
+  
+  .section-title::after {
+    content: '';
+    @apply block h-1 w-16 mt-2 bg-wood;
+  }
+
+  .neon-gradient {
+    background: linear-gradient(90deg, #0EA5E9, #38BDF8);
+  }
+
+  .neon-border {
+    @apply border border-neon-blue/50;
+    box-shadow: 0 0 10px rgba(14, 165, 233, 0.5);
+  }
+
+  .neon-card {
+    @apply bg-dark-card border border-neon-blue/30 shadow-lg;
+    box-shadow: 0 5px 15px rgba(14, 165, 233, 0.15);
+  }
+}
+
+@keyframes skill-fill {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.vertical-timeline-element-content {
+  @apply bg-card shadow-md rounded-lg p-6 relative;
+}
+
+.timeline-dot {
+  @apply absolute rounded-full bg-wood -left-3 top-6 h-6 w-6 flex items-center justify-center text-white;
+  box-shadow: 0 0 0 4px var(--background);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.wood-gradient {
+  background: linear-gradient(135deg, #0EA5E9, #38BDF8);
+}
+
+.project-card {
+  backface-visibility: hidden;
+  transform: perspective(1000px) rotateY(0deg);
+  transition: transform 0.6s ease;
+}
