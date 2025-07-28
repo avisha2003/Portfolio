@@ -34,7 +34,7 @@ const projects = [
   {
     id: 3,
     title: "Quick Assist - Customer Care Management",
-    role: "Team Leader",
+    role: "Team Member",
     description:
       "A Java-based web application with dashboards for customers, agents, and admins, enabling customer queries for registered companies.",
     technologies: ["Java", "JSP", "Bootstrap", "Eclipse", "Git"],
