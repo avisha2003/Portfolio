@@ -6,7 +6,7 @@ const projects = [
   {
     id: 1,
     title: "NexaBiz Business Management System",
-    role: "Team Leader",
+    role: "Team Member",
     description:
       "A full-stack web application tailored for B2B manufacturing businesses. The system supports client registration/login, order and return management, inventory tracking, and financial operations.",
     contribution:
@@ -20,21 +20,21 @@ const projects = [
   },
   {
     id: 2,
-    title: "ProTrack – Personal Finance Tracker",
+    title: "Money Mate - Expense Tracker",
     role: "Individual Project",
     description:
-      "A simple Kotlin app to track income, expenses, and savings. It offers category-wise analysis, budget tracking with alerts, and daily reminders. Data is saved with Shared Preferences and backed up via internal storage.",
-    technologies: ["Kotlin", "Android Studio", "Git"],
-    image: "/portfolio/lovable-uploads/protrackL.jpeg",
+      "The Expense Tracker App is a simple and efficient web application developed using Angular for the frontend and JSON Server as a mock backend. It allows users to track their daily expenses, view transaction history, and maintain control over their financial activities.",
+    technologies: ["Angular", "Node.js", "JSON Server", "VS Code", "Git"],
+    image: "/portfolio/lovable-uploads/moneymate.jpg",
     links: {
-      github: "https://github.com/avishadilshan01/ProTrack",
+      github: "https://github.com/avisha2003/Expense-Tracker-Angular",
       demo: "#",
     },
   },
   {
     id: 3,
     title: "Quick Assist - Customer Care Management",
-    role: "Team Leader",
+    role: "Team Member",
     description:
       "A Java-based web application with dashboards for customers, agents, and admins, enabling customer queries for registered companies.",
     technologies: ["Java", "JSP", "Bootstrap", "Eclipse", "Git"],
